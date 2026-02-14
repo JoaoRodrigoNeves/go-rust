@@ -1,0 +1,11 @@
+services:
+  dev:
+    build: .
+    volumes:
+      - .:/workspace
+      - cargo-cache:/root/.cargo
+    stdin_open: true
+    tty: true
+
+volumes:
+  cargo-cache:
