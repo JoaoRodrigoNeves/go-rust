@@ -1,0 +1,7 @@
+{
+    "name": "Go Dev",
+    "dockerComposeFile": "../../docker-compose.yaml",
+    "service": "go-dev",
+    "workspaceFolder": "/workspace",
+    "remoteUser": "root"
+}

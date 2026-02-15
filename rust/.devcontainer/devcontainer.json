@@ -1,0 +1,7 @@
+{
+    "name": "Rust Dev",
+    "dockerComposeFile": "../../docker-compose.yaml",
+    "service": "rust-dev",
+    "workspaceFolder": "/workspace",
+    "remoteUser": "root"
+}

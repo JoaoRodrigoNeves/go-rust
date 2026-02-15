@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     bash \
     && rm -rf /var/lib/apt/lists/*
 
-ENV GO_VERSION=1.22.5
+ENV GO_VERSION=1.26.0
 
 RUN curl -LO https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz \
     && tar -C /usr/local -xzf go${GO_VERSION}.linux-amd64.tar.gz \
