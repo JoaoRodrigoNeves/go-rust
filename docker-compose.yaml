@@ -1,11 +1,29 @@
+version: "3.9"
+
 services:
-  dev:
-    build: .
+
+  go-dev:
+    build:
+      context: ./go
+    container_name: go-dev
     volumes:
-      - .:/workspace
+      - ./workspace:/workspace
+      - go-mod-cache:/go/pkg/mod
+    stdin_open: true
+    tty: true
+
+  rust-dev:
+    build:
+      context: ./rust
+    container_name: rust-dev
+    volumes:
+      - ./workspace:/workspace
       - cargo-cache:/root/.cargo
+      - rust-target-cache:/workspace/target
     stdin_open: true
     tty: true
 
 volumes:
   cargo-cache:
+  rust-target-cache:
+  go-mod-cache:
