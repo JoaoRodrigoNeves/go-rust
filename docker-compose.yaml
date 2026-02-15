@@ -9,6 +9,8 @@ services:
     volumes:
       - ./workspace:/workspace
       - go-mod-cache:/go/pkg/mod
+    ports:
+      - "8080:8080"
     stdin_open: true
     tty: true
 
@@ -20,6 +22,8 @@ services:
       - ./workspace:/workspace
       - cargo-cache:/root/.cargo
       - rust-target-cache:/workspace/target
+    ports:
+      - "8081:8081"
     stdin_open: true
     tty: true
 
